@@ -25,11 +25,11 @@
     "dependencies": {},
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Diluks93/uber.git"
+        "url": "git+https://github.com/Diluks93/pulse.git"
     },
     "bugs": {
-        "url": "https://github.com/Diluks93/uber/issues"
+        "url": "https://github.com/Diluks93/pulse/issues"
     },
-    "homepage": "https://github.com/Diluks93/uber#readme",
+    "homepage": "https://github.com/Diluks93/pulse#readme",
     "description": ""
 }
