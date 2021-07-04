@@ -21,6 +21,12 @@ a
   font-size: 16px
   width: 100%
   padding: 15px 28px
+ &_mini
+  padding: 12px 27px
+  width: 135px
+  height: 44px
+  font-weight: 500
+  font-size: 14px
 .promo
  min-height: 650px
  padding: 21px 0 93px
@@ -170,3 +176,173 @@ a
   font-size: 14px
   &:last-child
    margin-bottom: 20px
+.carousel
+  padding: 81px 0
+  &__wrapper
+    max-width: 950px
+    height: 580px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    #btn-prev,
+    #btn-next
+      border: none
+      background: url('../img/icons/slider/chevronLeftSolid.svg') center center/cover no-repeat
+      width: 31px
+      height: 50px
+    #btn-next
+      background: url('../img/icons/slider/chevronRightSolid.svg') center center/cover no-repeat
+  &__item
+    max-width: 750px
+    max-height: 580px
+    display: none
+    margin-left: 60px
+    margin-right: 60px
+    &_active 
+      display: block
+.catalog
+  min-height: 1182px
+  padding-bottom: 79px
+  &__title
+    font-size: 30px
+    text-align: center
+    text-transform: uppercase
+    color: $black
+  &__tabs
+    margin-top: 46px
+    list-style-type: none
+    display: flex
+    justify-content: center
+    margin-bottom: 0
+    padding-left: 0
+  &__tab
+    font-weight: 400
+    font-size: 18px
+    text-align: center
+    text-transform: uppercase
+    color: $blackGrey
+    background: rgba(0, 0, 0, 0.0001)
+    border: 2px solid #D0D0D0
+    box-sizing: border-box
+    padding: 17px 56px
+    transform: skewX(-25deg)
+    margin: 0 5px
+    cursor: pointer
+    transition: 0.5 all
+    &:hover
+      box-shadow: 3px 3px 20px $blackGrey
+      border: none
+    div 
+      transform: skew(25deg)
+    &_active
+      background: #C70101
+      color: $white
+      border: none
+  &__content
+    margin-top: 57px
+    display: none
+    flex-wrap: wrap
+    justify-content: space-between
+    &_active
+      display: flex
+  &-item
+    border: 2px solid $gainsborough
+    box-sizing: border-box
+    width: 303px
+    min-height: 442px
+    padding: 20px 20px 26px 20px
+    text-align: center
+    overflow: hidden
+    margin-bottom: 20px
+    &__img
+      max-width: 100%
+      height: 200px
+      display: block
+      margin: 0 auto
+    &__subtitle
+      margin-top: 15px
+      font-weight: bold
+      font-size: 16px
+    &__desc
+      margin-top: 15px
+      font-weight: 300
+      font-size: 14px
+      line-height: 22px
+    &__link,
+    &__back
+      margin-top: 10px
+      font-weight: 500
+      font-size: 14px
+      text-decoration-line: underline
+      color: $red
+      &:hover
+        color: $red
+    hr
+      border-color: $gainsborough
+      margin-top: 17px
+      margin-bottom: 17px
+      border-bottom: none
+    &__footer
+      display: flex
+      justify-content: space-between
+      text-align: left
+    &__old-price
+      font-weight: 300
+      font-size: 14px
+      text-decoration-line: line-through
+      color: $asphalt
+    &__price
+      font-size: 20px
+      color: $black
+      font-weight: bold
+    &__wrapper
+      display: flex
+      width: calc(200% + 40px)
+    &__content
+      width: 50%
+      margin-right: 0px
+      transform: translateX(-100%)
+      transition: 0.5s all
+      &_active
+        transform: translateX(0%)
+        margin-right: 20px
+    &__list
+      width: 50%
+      position: relative
+      margin-left: 20px
+      transform: translateX(0%)
+      padding-right: 20px
+      transition: 0.5s all
+      padding-left: 19px
+      margin-bottom: 0
+      list-style-type: none
+      &_active
+        transform: translateX(-100%)
+        margin-right: 0px
+      li
+        position: relative
+        font-weight: 300
+        font-size: 14px
+        line-height: 21px
+        color: $asphalt
+        margin-bottom: 10px
+        text-align: left
+        &::before
+          content: ''
+          position: absolute
+          width: 5px
+          height: 5px
+          left: -14px
+          top: 7px
+          background-color: $red
+    &__back
+      position: absolute
+      left: calc(50% - 20px)
+      transform: translateX(-50%)
+      bottom: 0
+      
+
+
+
+    
+
