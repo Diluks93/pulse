@@ -37,7 +37,6 @@ next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
 setInterval(nextSlide, 4000);
 /*END SLIDER*/
-
 /* TABS */
 const tabs = document.getElementById('tabs'),
     contents = document.querySelectorAll('.catalog__content');
@@ -60,6 +59,7 @@ tabs.addEventListener('click', e => {
     }
 });
 /*END TABS*/
+/* TOOGLE CLASS */
 $(document).ready(function() {
     function toggleSlide(item) {
         $(item).each(function(i) {
@@ -72,4 +72,49 @@ $(document).ready(function() {
     };
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+});
+/* END TOOGLE CLASS */
+/* MODAL */
+$(document).ready(function() {
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    });
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__desc').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        })
+    });
+});
+/* END MODAL */
+/* VALIDATE */
+$(document).ready(function() {
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: 'required',
+                phone: 'required',
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: 'Пожалуйста, введите Ваше имя',
+                phone: 'Пожалуйста введите Ваш номер телефона',
+                email: {
+                    required: 'Нам нужен Ваш E-mail для контакта с Вами',
+                    email: 'Ваш E-mail должен соответствовать форме name@domain.com'
+                }
+            }
+        });
+    };
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+    $('input[name=phone]').mask('+7 (999) 999-99-99')
 });
