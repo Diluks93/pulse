@@ -1,8 +1,23 @@
-@media (max-width: 1200px)
 @media (max-width: 991px)
  .container
   padding-right: 10px
   padding-left: 10px
+ .carousel
+   padding: 40px 0
+   &__inner
+     max-width: 680px
+   &__item
+     width: 630px
+     margin-left: 0
+     margin-right: 0
+ .catalog
+   &__tab
+     padding: 17px 50px
+   &__content
+     justify-content: center
+ .reviews
+   &__wrapper
+     width: 100%
 @media (max-width: 767px)
  .header
   &__logo
@@ -18,10 +33,23 @@
   &__items
    flex-wrap: wrap
    margin-top: 30px
-  &__item
-   &:last-child
-    margin: 0 auto
-    margin-top: 30px
+   justify-content: center
+ .carousel
+   &__wrapper
+     height: 400px
+   &__item
+     width: 430px
+     margin-left: 0
+     margin-right: 0
+ .catalog
+   &__tabs
+     margin-top: 25px
+   &__tab
+     padding: 17px 20px
+ .reviews
+   &__block
+     &_desc
+       margin-left: 30px
 @media (max-width: 575px)
  .header
   flex-direction: column
@@ -49,4 +77,29 @@
    line-height: 50px
   &__descr
    font-size: 15px
-
+ .carousel
+   display: none
+ .catalog
+   padding-bottom: 20px
+   &__title
+     font-size: 21px
+     margin-top: 20px
+   &__tab
+     padding: 10px 8px
+     div
+       font-size: 10px
+   &__content
+     margin-top: 30px
+ .reviews
+   &__title
+     font-size: 21px
+     margin-top: 20px
+   &__block
+     flex-direction: column
+     justify-content: center
+     align-items: center
+     &_desc
+       display: flex
+       flex-direction: column
+       align-items: center
+       margin-left: 0        

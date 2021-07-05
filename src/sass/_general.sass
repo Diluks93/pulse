@@ -215,6 +215,12 @@ a
     justify-content: center
     margin-bottom: 0
     padding-left: 0
+    &_wrapper
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-flow: column
   &__tab
     font-weight: 400
     font-size: 18px
@@ -234,6 +240,7 @@ a
       border: none
     div 
       transform: skew(25deg)
+      pointer-events: none
     &_active
       background: #C70101
       color: $white
@@ -340,6 +347,42 @@ a
       left: calc(50% - 20px)
       transform: translateX(-50%)
       bottom: 0
+.reviews
+  min-height: 941px
+  padding-bottom: 26px
+  color: $black
+  &__title
+    font-weight: bold
+    font-size: 30px
+    text-align: center
+    text-transform: uppercase
+  &__wrapper
+    display: flex
+    flex-direction: column
+    margin-top: 30px
+  &__block
+    display: flex
+    justify-content: center
+    margin: 30px 0
+    &_img
+      width: 169px
+      height: 169px
+    &_desc
+      margin-left: 61px
+      &-title
+        font-weight: bold
+        font-size: 18px
+      &-subtitle
+        font-weight: 500
+        font-size: 14px
+        color: $blackGrey
+      &-text
+        max-width: 680px
+        font-weight: 300
+        font-size: 16px
+        line-height: 24px
+        margin-top: 10px
+
       
 
 
