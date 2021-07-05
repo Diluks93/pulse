@@ -11,22 +11,30 @@ a
  margin-top: 4px
  margin-right: 0
  width: 153px
+ &:hover
+    box-shadow: 3px 3px 20px $asphalt
  &_main
   padding: 12px 28px
   font-size: 16px
   margin-top: 67px
   width: 300px
+  &:hover
+    box-shadow: 3px 3px 20px $asphalt
  &_submit
   font-weight: 500
   font-size: 16px
   width: 100%
   padding: 15px 28px
+  &:hover
+    box-shadow: 3px 3px 20px $asphalt
  &_mini
   padding: 12px 27px
   width: 135px
   height: 44px
   font-weight: 500
   font-size: 14px
+  &:hover
+    box-shadow: 3px 3px 20px $asphalt
 .promo
  min-height: 650px
  padding: 21px 0 93px
@@ -382,6 +390,51 @@ a
         font-size: 16px
         line-height: 24px
         margin-top: 10px
+.footer
+  min-height: 630px
+  position: relative
+  &__info
+    color: $white
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    max-width: 460px
+    height: 270px
+    background-color: $trafficRed
+    padding: 50px 68px 60px
+    line-height: 20px
+  &__addr
+    margin-bottom: 36px
+    font-size: 20px
+    font-weight: 500
+    text-align: center
+  &__call
+    font-weight: 700
+    font-size: 20px
+    text-align: center
+    display: block
+    margin-bottom: 38px
+    color: $white
+    &:hover
+      color: $white
+  &__social-item
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 50px
+    height: 50px
+    border: 2px solid $white
+    border-radius: 100%
+    margin: 0 15px
+    &:hover
+      box-shadow: 3px 3px 20px $asphalt
+    img
+      height: 27px
+  &__socials
+    display: flex
+    justify-content: center
+    align-items: center
 
       
 
