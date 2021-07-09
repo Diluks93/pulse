@@ -37,6 +37,7 @@ next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
 setInterval(nextSlide, 4000);
 /*END SLIDER*/
+
 /* TABS */
 const tabs = document.getElementById('tabs'),
     contents = document.querySelectorAll('.catalog__content');
@@ -59,6 +60,7 @@ tabs.addEventListener('click', e => {
     }
 });
 /*END TABS*/
+
 /* TOOGLE CLASS */
 $(document).ready(function() {
     function toggleSlide(item) {
@@ -74,6 +76,7 @@ $(document).ready(function() {
     toggleSlide('.catalog-item__back');
 });
 /* END TOOGLE CLASS */
+
 /* MODAL */
 $(document).ready(function() {
     $('[data-modal=consultation]').on('click', function() {
@@ -90,6 +93,7 @@ $(document).ready(function() {
     });
 });
 /* END MODAL */
+
 /* VALIDATE */
 $(document).ready(function() {
     function validateForms(form) {
@@ -115,6 +119,26 @@ $(document).ready(function() {
     validateForms('#consultation-form');
     validateForms('#consultation form');
     validateForms('#order form');
+/* END VALIDATE */
 
-    $('input[name=phone]').mask('+7 (999) 999-99-99')
+/* MASK */
+$('input[name=phone]').mask('+7 (999) 999-99-99');
+/* END MASK */
+
+/* MAILER */
+$('form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: 'mailer/smart.php',
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find('input').val('');
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+        $('form').trigger('reset');
+    });
+    return false;
+});
+/* END MAILER */
 });

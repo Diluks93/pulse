@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /pp
+/mailer
 
 # testing
 /coverage
