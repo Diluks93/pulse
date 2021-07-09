@@ -22,7 +22,9 @@
         "not IE 11",
         "maintained node versions"
     ],
-    "dependencies": {},
+    "dependencies": {
+        "animate.css": "^4.1.1"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Diluks93/pulse.git"

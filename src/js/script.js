@@ -141,4 +141,27 @@ $('form').submit(function(e) {
     return false;
 });
 /* END MAILER */
+
+/* SCROLLY PAGEUP */
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+        $('.pageup').fadeIn();
+    }   else {
+        $('.pageup').fadeOut();
+    }
 });
+/* END SCROLLY PAGEUP */
+
+/* SLOW SCROLL */
+$('.pageup').click(function(){
+    const _href = $(this).attr('href');
+    $('html,body').animate({scrollTop: $(_href).offset().top+'px'});
+    return false;
+});
+/* END SLOW SCROLL */
+
+/* ANIMATION */
+    
+});
+new WOW().init();
+

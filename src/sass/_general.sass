@@ -133,6 +133,10 @@ a
   align-items: center
   &_img
    width: 70px
+   &_animated
+     animation: heartbeat 1.5s ease infinite
+     &:hover
+       animation-play-state: paused
   &_block
    font-weight: 300
    font-size: 14px
@@ -359,6 +363,16 @@ a
           left: -14px
           top: 7px
           background-color: $red
+        &:last-child
+          position: absolute
+          bottom: -10px
+          left: 120px
+          color: $red
+          cursor: pointer
+          &::before
+            content: ''
+            width: 0
+            height: 0
     &__back
       position: absolute
       left: calc(50% - 20px)
@@ -402,6 +416,9 @@ a
 .footer
   min-height: 630px
   position: relative
+  &__map
+    script
+      width: 100%
   &__info
     color: $white
     position: absolute
@@ -484,6 +501,15 @@ a
     margin-bottom: 15px
 #consultation, #order, #thanks
   display: none
+.pageup
+  display: none
+  position: fixed
+  bottom: 40px
+  right: 40px
+  width: 40px
+  height: 40px
+  img
+    width: 100%
 
 
 
